@@ -1,0 +1,79 @@
+WORKSHEET-1
+SQL
+
+Q1 and Q2 have one or more correct answer. Choose all the correct option to answer your question.
+
+1. Which of the following is/are DDL commands in SQL?
+ A) Create B) Update
+ C) Delete D) ALTER
+ Ans:- A, D
+ 
+2. Which of the following is/are DML commands in SQL?
+ A) Update B) Delete
+ C) Select D) Drop
+ Ans:- A, B and C
+ 
+Q3 to Q10 have only one correct answer. Choose the correct option to answer your question.
+3. Full form of SQL is:
+ A) Strut querying language B) Structured Query Language
+ C) Simple Query Language D) None of them
+ Ans:- B
+ 
+4. Full form of DDL is:
+ A) Descriptive Designed Language B) Data Definition Language
+ C) Data Descriptive Language D) None of the above.
+ Ans:- B
+ 
+5. DML is:
+ A) Data Manipulation Language B) Data Management Language
+ C) Data Modeling Language D) None of these
+ Ans:- A
+ 
+6. Which of the following statements can be used to create a table with column B int type and C float type?
+ A) Table A (B int, C float) B) Create A (b int, C float)
+ C) Create Table A (B int,C float) D) All of them
+ Ans:- C
+ 
+7. Which of the following statements can be used to add a column D (float type) to the table A created above?
+ A) Table A ( D float) B) Alter Table A ADD COLUMN D float
+ C) Table A( B int, C float, D float) D) None of them
+ Ans:- B
+ 
+8. Which of the following statements can be used to drop the column added in the above question?
+ A) Table A Drop D B) Alter Table A Drop Column D
+ C) Delete D from A D) None of them
+ Ans:- B
+ 
+9. Which of the following statements can be used to change the data type (from float to int ) of the column D of
+table A created in above questions?
+ A) Table A (D float int) B) Alter Table A Alter Column D int
+ C) Alter Table A D float int D) Alter table A Column D float to int
+ Ans:- B
+ 
+10. Suppose we want to make Column B of Table A as primary key of the table. By which of the following
+statements we can do it?
+ A) Alter Table A Add Constraint Primary Key B B) Alter table (B primary key)
+ C) Alter Table A Add Primary key B D) None of them
+ Ans:- A
+ 
+Q11 to Q15 are subjective answer type questions, Answer them briefly.
+
+11. What is data-warehouse?
+Ans:- A data warehouse is a large collection of business data used to help an organization make decisions. A Data warehouse is typically used to connect and analyze business data from heterogeneous sources. The data warehouse is the core of the BI system which is built for data analysis and reporting.
+
+12. What is the difference between OLTP VS OLAP?
+A Data warehouse is typically used to connect and analyze business data from heterogeneous sources. The data warehouse is the core of the BI system which is built for data analysis and reporting.
+
+13. What are the various characteristics of data-warehouse?
+Ans:-
+	a)Integrated: The way data is extracted and transformed is uniform, regardless of the original source.
+	b)Time-variant: Data is organized via time-periods (weekly, monthly, annually, etc.).
+	c)Non-volatile: A data warehouse is not updated in real-time. It is periodically updated via the uploading of data, protecting it from the influence of momentary change.
+
+14. What is Star-Schema??
+Ans:- 
+In data warehousing and business intelligence (BI), a star schema is the simplest form of a dimensional model, in which data is organized into facts and dimensions. It is said to be star as its physical model resembles to the star shape having a fact table at its center and the dimension tables at its peripheral representing the star’s points.
+
+15. What do you mean by SETL?
+Ans:-
+SETL (SET Language) is a very high-level programming language based on the mathematical theory of sets. SETL provides two basic aggregate data types: unordered sets, and sequences (the latter also called tuples). The elements of sets and tuples can be of any arbitrary type, including sets and tuples themselves. Maps are provided as sets of pairs (i.e., tuples of length 2) and can have arbitrary domain and range types. Primitive operations in SETL include set membership, union, intersection, and power set construction, among others.
