@@ -1,0 +1,63 @@
+1. Write SQL query to create table Customers.
+Ans:-
+create table customers (customerNumber int, customerName varchar(50), contactFirstName varchar(25), contactLastName varchar(25), phone int,
+addressLine1 varchar(100), addressLine2 varchar(100), city varchar(20),
+state varchar(20), postalCode int, country varchar(20),  salesRepEmployeeNumber int, ceditLimit int,
+PRIMARY KEY(customerNumber));
+
+2. Write SQL query to create table Orders.
+Ans: 
+create table orders(orderNumber int, orderDate DATE, requiredDate DATE,
+shippedDate DATE, status varchar(20), comments varchar(500), customerNumber int);
+
+3. Write SQL query to show all the columns data from the Orders Table.
+Ans:-
+select * from orders;
+
+4. Write SQL query to show all the comments from the Orders Table.
+Ans:-
+select comments from orders;
+
+5. Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+Ans:-
+select orderDate, count(orderNumber) as count from orders group by orderDate;
+
+6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+Ans:-
+select employeeNumber, lastName, firstName from employees;
+
+7. Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+Ans:-
+select orders.orderNumber, customers.customerName from orders left join customers on orders.customerNumber=customers.customerNumber ;
+
+8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another column.
+Ans:-
+select customers.customerName, employees.firstName, employees.lastName from customers left join employees on customers.salesRepEmployeeNumber = employees.employeeNumber;
+
+9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date from the payments table.
+Ans:-
+select paymentDate, count(amount) from payments group by paymentDate;
+
+10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+Ans:-
+select productName, MSRP, productDescription from products;
+
+11. Write a SQL query to print the productName, productDescription of the most ordered product.
+Ans:-
+select productName, productDescription from products where (select productCode from orderdetails order by quantityOrdered desc limit 1);
+
+12. Write a SQL query to print the city name where maximum number of orders were placed.
+Ans:-
+select count(orders.orderNumber) as count, customers.city from orders left join customers on orders.customerNumber = customers.customerNumber group by city order by count desc limit 1;
+
+13. Write a SQL query to get the name of the state having maximum number of customers.
+Ans:-
+select state, count(customerNumber) as count from customers group by state order by count desc limit 1;
+
+14. Write a SQL query to print the employee number in one column and Full name of the employee in the second column for all the employees.
+Ans:-
+select  employeeNumber,concat(firstName,lastName) from employees;
+
+15. Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that order (quantityOrdered × priceEach
+Ans:-
+select orderNumber, customerName, (od.quantityOrdered * od.priceEach) as total_amount from orders as o left join customers as c on o.customerNumber=c.customerNumber left join orderdetails as od on od.orderNumber = o.orderNumber;
